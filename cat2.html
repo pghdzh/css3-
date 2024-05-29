@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cat">
+            <div class="body"></div>
+            <div class="head">
+                <div class="ear"></div>
+                <div class="ear"></div>
+                <div class="nose"></div>
+                <div class="leftWhisker">
+                    <div class="whisker"></div>
+                    <div class="whisker"></div>
+                </div>
+                <div class="rightWhisker">
+                    <div class="whisker"></div>
+                    <div class="whisker"></div>
+                </div>
+            </div>
+            <div class="tailArea">
+                <div class="tail">
+                    <div class="tail">
+                        <div class="tail">
+                            <div class="tail">
+                                <div class="tail">
+                                    <div class="tail">
+                                        <div class="tail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stand">
+
+        </div>
+    </div>
+
+</body>
+
+<style>
+    .container {
+        position: relative;
+        margin-top: 20%;
+        margin-left: 50%;
+        height: 50px;
+        width: 100px;
+        transform: scale(5);
+
+    }
+
+    .stand {
+        height: 4px;
+        width: 80px;
+        border-radius: 4px;
+        background-color: #3eaf7c;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+    }
+
+    .body {
+        background-color: #2c3e50;
+        width: 55px;
+        height: 25px;
+        border-radius: 50px 50px 0 0;
+
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+    }
+
+    .head {
+        content: "";
+        width: 35px;
+        height: 18px;
+        background-color: #2c3e50;
+        border-radius: 40px 40px 0 0;
+
+        position: absolute;
+        left: 45px;
+        bottom: 4px;
+    }
+
+    .ear {
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-bottom: 10px solid #2c3e50;
+        position: absolute;
+        top: -10px;
+        left: 4px;
+    }
+
+    .ear:nth-child(2) {
+        border: 6px solid transparent;
+        border-bottom: 10px solid #2c3e50;
+
+        top: -10px;
+        left: 15px;
+    }
+
+
+
+    .nose {
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+        background-color: #fd6e72;
+
+        position: absolute;
+        top: 9px;
+        left: 15px;
+    }
+
+    .leftWhisker {
+        position: absolute;
+        left: 4px;
+        top: 8px;
+    }
+
+    .rightWhisker {
+        position: absolute;
+        right: 4px;
+        top: 10px;
+        transform: rotate(180deg);
+    }
+
+    .whisker {
+        width: 8px;
+        border: 1px solid #fdf9de;
+        transform: rotate(10deg);
+        position: absolute;
+        transform-origin: right;
+        top: 0;
+    }
+
+    .whisker:nth-child(2) {
+
+        transform: rotate(-20deg);
+    }
+
+
+
+    .tailArea {
+        position: absolute;
+        left: 6px;
+        bottom: 0px;
+        z-index: 3;
+    }
+
+    .tail {
+        position: absolute;
+        height: 15px;
+        width: 6px;
+        border-radius: 3px;
+        background-color: #2c3e50;
+        bottom: -5px;
+        right: 0;
+    }
+</style>
+
+</html>

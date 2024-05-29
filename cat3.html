@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cat">
+            <div class="body"></div>
+            <div class="head">
+                <div class="ear"></div>
+                <div class="ear"></div>
+                <div class="nose"></div>
+                <div class="leftWhisker">
+                    <div class="whisker"></div>
+                    <div class="whisker"></div>
+                </div>
+                <div class="rightWhisker">
+                    <div class="whisker"></div>
+                    <div class="whisker"></div>
+                </div>
+            </div>
+            <div class="tailArea">
+                <div class="tail">
+                    <div class="tail">
+                        <div class="tail">
+                            <div class="tail">
+                                <div class="tail">
+                                    <div class="tail">
+                                        <div class="tail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stand">
+
+        </div>
+    </div>
+
+</body>
+
+<style>
+    .container {
+        position: relative;
+        margin-top: 20%;
+        margin-left: 50%;
+        height: 50px;
+        width: 100px;
+        transform: scale(5);
+
+    }
+
+    .stand {
+        height: 4px;
+        width: 80px;
+        border-radius: 4px;
+        background-color: #3eaf7c;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+    }
+
+    .body {
+        background-color: #2c3e50;
+        width: 55px;
+        height: 25px;
+        border-radius: 50px 50px 0 0;
+
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+
+        animation: body 10s infinite;
+    }
+
+    .head {
+        content: "";
+        width: 35px;
+        height: 18px;
+        background-color: #2c3e50;
+        border-radius: 40px 40px 0 0;
+
+        position: absolute;
+        left: 45px;
+        bottom: 4px;
+    }
+
+    .ear {
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-bottom: 10px solid #2c3e50;
+        position: absolute;
+        top: -10px;
+        left: 4px;
+        animation: left_ear 10s infinite;
+    }
+
+    .ear:nth-child(2) {
+        border: 6px solid transparent;
+        border-bottom: 10px solid #2c3e50;
+        top: -10px;
+        left: 10px;
+        animation: right-ear 10s infinite;
+    }
+
+
+
+    .nose {
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+        background-color: #fd6e72;
+
+        position: absolute;
+        top: 9px;
+        left: 15px;
+    }
+
+    .leftWhisker {
+        width: 10px;
+        height: 5px;
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        transform-origin: right;
+        animation: left-whisker 10s infinite;
+    }
+
+    .whisker {
+        width: 8px;
+        border: 1px solid #fdf9de;
+        transform: rotate(10deg);
+        transform-origin: right;
+    }
+
+    .whisker:nth-child(2) {
+        transform: rotate(-20deg);
+
+    }
+
+    .rightWhisker {
+        width: 10px;
+        height: 5px;
+        position: absolute;
+        right: 16px;
+        top: 7px;
+        transform: rotate(180deg);
+        transform-origin: right;
+        animation: right-whisker 10s infinite;
+    }
+
+
+
+
+
+
+    .tailArea {
+        position: absolute;
+        left: 6px;
+        bottom: 0px;
+        z-index: 3;
+    }
+
+    .tail {
+        position: absolute;
+        height: 15px;
+        width: 6px;
+        border-radius: 3px;
+        background-color: #2c3e50;
+        bottom: -5px;
+        right: 0;
+        transform-origin: right;
+    }
+
+    .tail>.tail {
+        animation: tail 10s infinite;
+    }
+
+
+    @keyframes tail {
+        10% {
+            transform: rotate(-10deg);
+        }
+
+        15% {
+            transform: rotate(5deg);
+        }
+
+        20% {
+            transform: rotate(-30deg);
+        }
+
+        25% {
+            transform: rotate(2deg);
+        }
+
+        40% {
+            transform: rotate(-10deg);
+        }
+
+        50% {
+            transform: rotate(5deg);
+        }
+
+        55% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes right-whisker {
+        10% {
+            transform: rotate(190deg);
+        }
+
+        15% {
+            transform: rotate(180deg);
+        }
+
+        20% {
+            transform: rotate(175deg);
+        }
+
+        25% {
+            transform: rotate(190deg);
+        }
+
+        45% {
+            transform: rotate(180deg);
+        }
+
+        55% {
+            transform: rotate(185deg);
+        }
+
+        56% {
+            transform: rotate(175deg);
+        }
+    }
+
+    @keyframes left-whisker {
+        15% {
+            transform: rotate(-5deg);
+        }
+
+        20% {
+            transform: rotate(0deg);
+        }
+
+        45% {
+            transform: rotate(10deg);
+        }
+
+        53% {
+            transform: rotate(-5deg);
+        }
+
+        56% {
+            transform: rotate(10deg);
+        }
+    }
+
+    @keyframes left_ear {
+        0% {
+            transform: rotate(-20deg);
+        }
+
+        5% {
+            transform: rotate(-6deg);
+        }
+
+        15% {
+            transform: rotate(-15deg)
+        }
+
+        30% {
+            transform: rotate(-30deg);
+        }
+
+        45% {
+            transform: rotate(0);
+        }
+
+        60% {
+            transform: rotate(-15deg);
+        }
+
+        80% {
+            transform: rotate(-6deg);
+        }
+
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+    @keyframes right-ear {
+        0% {
+            transform: rotate(-16deg);
+        }
+
+        15% {
+            transform: rotate(-19deg);
+        }
+
+        30% {
+            transform: rotate(-30deg);
+        }
+
+        35% {
+            transform: rotate(-19deg);
+        }
+
+        38% {
+            transform: rotate(-30deg);
+        }
+
+        40% {
+            transform: rotate(-19deg);
+        }
+
+        42% {
+            transform: rotate(-30deg);
+        }
+
+        44% {
+            transform: rotate(-9deg);
+        }
+
+        60% {
+            transform: rotate(-19deg);
+        }
+
+        62% {
+            transform: rotate(-30deg);
+        }
+
+        64% {
+            transform: rotate(-19deg);
+        }
+
+        66% {
+            transform: rotate(-30deg);
+        }
+
+        80% {
+            transform: rotate(-19deg);
+        }
+
+        90% {
+            transform: rotate(-16deg);
+        }
+    }
+
+    @keyframes body {
+        10% {
+            transform: scaleY(1.15);
+        }
+
+        15% {
+            transform: scaleY(1);
+        }
+
+        20% {
+            transform: scaleY(1.25);
+        }
+
+        25% {
+            transform: scaleY(1);
+        }
+
+        45% {
+            transform: scaleY(1.15);
+        }
+
+        55% {
+            transform: scaleY(1);
+        }
+
+        58% {
+            transform: scaleY(1.15);
+        }
+    }
+</style>
+
+</html>
